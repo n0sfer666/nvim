@@ -18,7 +18,7 @@
 │       ├── completion.lua    -- blink.cmp
 │       ├── lint.lua          -- nvim-lint (stylelint)
 │       ├── git.lua           -- gitsigns, lazygit
-│       ├── treesitter.lua    -- nvim-treesitter
+│       ├── treesitter.lua    -- nvim-treesitter (branch=main, новое API)
 │       └── fuzzy.lua         -- fzf-lua
 └── spell/                    -- словари (ru, en, кастомный)
 ```
@@ -32,3 +32,4 @@
 - LSP навигация (gd/gr/gI/gD) через нативный vim.lsp.buf
 - Symbols через fzf-lua (ds/ws)
 - Кириллица через vim.opt.langmap
+- nvim-treesitter на ветке `main` (репо архивирован 2026-04-03): `require('nvim-treesitter').install({...})` + `FileType` autocmd с `vim.treesitter.start()`. Без `ensure_installed`, без `highlight.enable`, без lazy-loading.
