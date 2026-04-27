@@ -9,7 +9,6 @@ return {
     'nvim-treesitter/nvim-treesitter',
     branch = 'main',
     lazy = false,
-    build = ':TSUpdate',
     config = function()
       local ts = require('nvim-treesitter')
       if type(ts.install) == 'function' then
