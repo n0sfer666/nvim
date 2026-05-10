@@ -14,6 +14,17 @@ vim.api.nvim_create_autocmd('VimEnter', {
   end,
 })
 
+vim.api.nvim_create_autocmd('SwapExists', {
+  callback = function(args)
+    local choice = vim.fn.confirm(
+      'Swap file found for "' .. args.file .. '"',
+      '&Open read-only\n&Edit anyway\n&Recover\n&Delete it\n&Quit\n&Abort',
+      4
+    )
+    vim.v.swapchoice = ({ 'o', 'e', 'r', 'd', 'q', 'a' })[choice] or 'q'
+  end,
+})
+
 vim.api.nvim_create_autocmd({ 'BufReadPre', 'BufNewFile' }, {
   callback = function()
     local undo_dir = vim.fn.stdpath('state') .. '/undo/'

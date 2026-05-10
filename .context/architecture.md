@@ -9,7 +9,7 @@
 │   ├── config/
 │   │   ├── options.lua       -- vim.opt, vim.g, langmap, spell
 │   │   ├── keymaps.lua       -- базовые маппинги
-│   │   ├── autocmds.lua      -- yank highlight, VimEnter fzf, undo path limit
+│   │   ├── autocmds.lua      -- yank highlight, VimEnter fzf, undo path limit, SwapExists dialog
 │   │   └── lsp-servers.lua   -- системные LSP-серверы (eslint, ts_ls, cssls, jsonls, sourcekit, stylelint)
 │   └── plugins/
 │       ├── editor.lua        -- oil, surround, autopairs, autotag, vim-sleuth, todo-comments
